@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ExternalLink, Users, FileText, Zap, Shield, TrendingUp, Plus, Minus } from 'lucide-react';
+import { ChevronDown, ExternalLink, Users, FileText, Zap, Shield, TrendingUp, Plus, Minus, Twitter, MessageCircle } from 'lucide-react';
 
 const ComicButton = ({ 
   children, 
@@ -92,22 +92,22 @@ function App() {
 
       {/* Navbar */}
       <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-6xl mx-auto px-4">
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl border-4 border-black px-6 py-4 flex items-center justify-between">
-          <div className="font-bold text-2xl text-black">Vario</div>
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl border-4 border-black px-5 py-3 flex items-center justify-between">
+          <div className="font-bold text-xl text-black">Vario</div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="font-medium hover:text-purple-600 transition-colors">Home</a>
-            <a href="#how-it-works" className="font-medium hover:text-purple-600 transition-colors">How It Works</a>
-            <a href="#earn" className="font-medium hover:text-purple-600 transition-colors">Earn</a>
-            <a href="#docs" className="font-medium hover:text-purple-600 transition-colors">Docs</a>
+            <a href="#home" className="font-medium text-sm hover:text-purple-600 transition-colors">Home</a>
+            <a href="#how-it-works" className="font-medium text-sm hover:text-purple-600 transition-colors">How It Works</a>
+            <a href="#earn" className="font-medium text-sm hover:text-purple-600 transition-colors">Earn</a>
+            <a href="#docs" className="font-medium text-sm hover:text-purple-600 transition-colors">Docs</a>
           </div>
           
-          <div className="hidden md:flex items-center space-x-4">
-            <div className="bg-gray-100 px-4 py-2 rounded-full border-2 border-black font-bold text-sm">
+          <div className="hidden md:flex items-center space-x-3">
+            <div className="bg-gray-100 px-3 py-1.5 rounded-full border-2 border-black font-bold text-xs">
               Current Yield: ~15%
             </div>
-            <ComicButton variant="purple">Earn Now</ComicButton>
+            <ComicButton variant="purple" size="sm">Earn Now</ComicButton>
           </div>
           
           {/* Mobile Menu Button */}
@@ -125,16 +125,16 @@ function App() {
         
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 bg-white/90 backdrop-blur-sm rounded-2xl border-4 border-black p-6">
+          <div className="md:hidden mt-4 bg-white/90 backdrop-blur-sm rounded-2xl border-4 border-black p-5">
             <div className="flex flex-col space-y-4">
-              <a href="#home" className="font-medium hover:text-purple-600 transition-colors">Home</a>
-              <a href="#how-it-works" className="font-medium hover:text-purple-600 transition-colors">How It Works</a>
-              <a href="#earn" className="font-medium hover:text-purple-600 transition-colors">Earn</a>
-              <a href="#docs" className="font-medium hover:text-purple-600 transition-colors">Docs</a>
-              <div className="bg-gray-100 px-4 py-2 rounded-full border-2 border-black font-bold text-sm text-center">
+              <a href="#home" className="font-medium text-sm hover:text-purple-600 transition-colors">Home</a>
+              <a href="#how-it-works" className="font-medium text-sm hover:text-purple-600 transition-colors">How It Works</a>
+              <a href="#earn" className="font-medium text-sm hover:text-purple-600 transition-colors">Earn</a>
+              <a href="#docs" className="font-medium text-sm hover:text-purple-600 transition-colors">Docs</a>
+              <div className="bg-gray-100 px-3 py-1.5 rounded-full border-2 border-black font-bold text-xs text-center">
                 Current Yield: ~15%
               </div>
-              <ComicButton variant="purple" className="w-full">Earn Now</ComicButton>
+              <ComicButton variant="purple" size="sm" className="w-full">Earn Now</ComicButton>
             </div>
           </div>
         )}
@@ -244,32 +244,32 @@ function App() {
           <p className="text-xl text-gray-700 mb-12">Join our community and participate in protocol governance.</p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
-              <Users className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-              <h3 className="font-bold text-xl mb-2">Discord</h3>
+              <MessageCircle className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+              <h3 className="font-bold text-xl mb-2 text-black">Discord</h3>
               <p className="text-gray-600 mb-4">Join our community discussions</p>
-              <ComicButton variant="purple" size="sm">
-                <ExternalLink className="w-4 h-4 mr-2" />
+              <ComicButton variant="purple" size="sm" className="inline-flex items-center">
+                <ExternalLink className="w-4 h-4 mr-1" />
                 Join
               </ComicButton>
             </div>
             
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
-              <ExternalLink className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-              <h3 className="font-bold text-xl mb-2">Twitter</h3>
+              <Twitter className="w-12 h-12 text-pink-600 mx-auto mb-4" />
+              <h3 className="font-bold text-xl mb-2 text-black">Twitter</h3>
               <p className="text-gray-600 mb-4">Follow for updates</p>
-              <ComicButton variant="pink" size="sm">
-                <ExternalLink className="w-4 h-4 mr-2" />
+              <ComicButton variant="pink" size="sm" className="inline-flex items-center">
+                <ExternalLink className="w-4 h-4 mr-1" />
                 Follow
               </ComicButton>
             </div>
             
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
-              <FileText className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-              <h3 className="font-bold text-xl mb-2">Telegram</h3>
-              <p className="text-gray-600 mb-4">Participate in protocol decisions</p>
-              <ComicButton variant="orange" size="sm">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Vote
+              <MessageCircle className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+              <h3 className="font-bold text-xl mb-2 text-black">Telegram</h3>
+              <p className="text-gray-600 mb-4">Join our Telegram community</p>
+              <ComicButton variant="orange" size="sm" className="inline-flex items-center">
+                <ExternalLink className="w-4 h-4 mr-1" />
+                Join
               </ComicButton>
             </div>
           </div>
