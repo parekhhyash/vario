@@ -244,7 +244,7 @@ function App() {
           <p className="text-xl text-gray-700 mb-12">Join our community and participate in protocol governance.</p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
-              <MessageCircle className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+              <FaDiscord className="w-12 h-12 text-purple-600 mx-auto mb-4" />
               <h3 className="font-bold text-xl mb-2 text-black">Discord</h3>
               <p className="text-gray-600 mb-4">Join our community discussions</p>
               <ComicButton variant="purple" size="sm" className="inline-flex items-center">
@@ -254,7 +254,7 @@ function App() {
             </div>
             
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
-              <Twitter className="w-12 h-12 text-pink-600 mx-auto mb-4" />
+              <FaTwitter className="w-12 h-12 text-pink-600 mx-auto mb-4" />
               <h3 className="font-bold text-xl mb-2 text-black">Twitter</h3>
               <p className="text-gray-600 mb-4">Follow for updates</p>
               <ComicButton variant="pink" size="sm" className="inline-flex items-center">
@@ -264,7 +264,7 @@ function App() {
             </div>
             
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
-              <MessageCircle className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+              <FaTelegram className="w-12 h-12 text-orange-600 mx-auto mb-4" />
               <h3 className="font-bold text-xl mb-2 text-black">Telegram</h3>
               <p className="text-gray-600 mb-4">Join our Telegram community</p>
               <ComicButton variant="orange" size="sm" className="inline-flex items-center">
