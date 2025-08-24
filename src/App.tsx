@@ -143,8 +143,8 @@ function App() {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-32 pb-16">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-black mb-6 leading-tight">
-            Earn <span className="text-purple-600">~15%</span> APY on your{' '}
+          <h1 className="text-4.5xl md:text-7xl font-bold text-black mb-6 leading-tight">
+            Earn upto <span className="text-purple-600">15%</span> APY on your{' '}
             <span className="text-lime-500">STABLES</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 mb-12 max-w-2xl mx-auto">
