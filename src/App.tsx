@@ -240,7 +240,7 @@ function App() {
       {/* Community & Governance */}
       <section className="py-20 px-4 bg-orange-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">Community & Governance</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">Community</h2>
           <p className="text-xl text-gray-700 mb-12">Join our community and participate in protocol governance.</p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
@@ -265,7 +265,7 @@ function App() {
             
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
               <FileText className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-              <h3 className="font-bold text-xl mb-2">Governance</h3>
+              <h3 className="font-bold text-xl mb-2">Telegram</h3>
               <p className="text-gray-600 mb-4">Participate in protocol decisions</p>
               <ComicButton variant="orange" size="sm">
                 <ExternalLink className="w-4 h-4 mr-2" />
