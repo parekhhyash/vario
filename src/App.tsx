@@ -130,7 +130,6 @@ function App() {
             <div className="flex flex-col space-y-4">
               <a href="#home" className="font-medium text-sm hover:text-purple-600 transition-colors">Home</a>
               <a href="#how-it-works" className="font-medium text-sm hover:text-purple-600 transition-colors">How It Works</a>
-              <a href="#earn" className="font-medium text-sm hover:text-purple-600 transition-colors">Earn</a>
               <a href="#docs" className="font-medium text-sm hover:text-purple-600 transition-colors">Docs</a>
               <div className="bg-gray-100 px-3 py-1.5 rounded-full border-2 border-black font-bold text-xs text-center">
                 Current Yield: ~15%
