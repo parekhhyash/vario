@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, MessageCircle, Send, Hash, Zap, Shield, TrendingUp, Plus, Minus } from 'lucide-react';
+import { ChevronDown, ExternalLink, Users, FileText, Zap, Shield, TrendingUp, Plus, Minus } from 'lucide-react';
 
 const ComicButton = ({ 
   children, 
@@ -95,19 +95,55 @@ function App() {
         <div className="bg-white/90 backdrop-blur-sm rounded-2xl border-4 border-black px-6 py-4 flex items-center justify-between">
           <div className="font-bold text-2xl text-black">Vario</div>
           
-          <div className="flex items-center space-x-4">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#home" className="font-medium hover:text-purple-600 transition-colors">Home</a>
+            <a href="#how-it-works" className="font-medium hover:text-purple-600 transition-colors">How It Works</a>
+            <a href="#earn" className="font-medium hover:text-purple-600 transition-colors">Earn</a>
+            <a href="#docs" className="font-medium hover:text-purple-600 transition-colors">Docs</a>
+          </div>
+          
+          <div className="hidden md:flex items-center space-x-4">
             <div className="bg-gray-100 px-4 py-2 rounded-full border-2 border-black font-bold text-sm">
               Current Yield: ~15%
             </div>
             <ComicButton variant="purple">Earn Now</ComicButton>
           </div>
+          
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <div className="w-6 h-6 flex flex-col justify-around">
+              <div className="w-full h-0.5 bg-black"></div>
+              <div className="w-full h-0.5 bg-black"></div>
+              <div className="w-full h-0.5 bg-black"></div>
+            </div>
+          </button>
         </div>
+        
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-4 bg-white/90 backdrop-blur-sm rounded-2xl border-4 border-black p-6">
+            <div className="flex flex-col space-y-4">
+              <a href="#home" className="font-medium hover:text-purple-600 transition-colors">Home</a>
+              <a href="#how-it-works" className="font-medium hover:text-purple-600 transition-colors">How It Works</a>
+              <a href="#earn" className="font-medium hover:text-purple-600 transition-colors">Earn</a>
+              <a href="#docs" className="font-medium hover:text-purple-600 transition-colors">Docs</a>
+              <div className="bg-gray-100 px-4 py-2 rounded-full border-2 border-black font-bold text-sm text-center">
+                Current Yield: ~15%
+              </div>
+              <ComicButton variant="purple" className="w-full">Earn Now</ComicButton>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-32 pb-16">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-black mb-6 leading-tight">
+          <h1 className="text-6xl md:text-8xl font-bold text-black mb-6 leading-tight">
             Earn <span className="text-purple-600">~15%</span> yield on your{' '}
             <span className="text-lime-500">STABLES</span>
           </h1>
@@ -202,41 +238,38 @@ function App() {
       </section>
 
       {/* Community & Governance */}
-      <section className="py-20 px-4 bg-gradient-to-br from-purple-50 to-pink-50">
+      <section className="py-20 px-4 bg-orange-50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">Join Our Community</h2>
-          <p className="text-xl text-gray-700 mb-12">Connect with the Vario community across all platforms.</p>
-          <div className="grid md:grid-cols-3 gap-8">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">Community & Governance</h2>
+          <p className="text-xl text-gray-700 mb-12">Join our community and participate in protocol governance.</p>
+          <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
-              <div className="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-black">
-                <Hash className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-bold text-xl mb-3">Discord</h3>
-              <p className="text-gray-600 mb-6">Join our community for real-time discussions and support</p>
-              <ComicButton variant="purple" size="sm" className="w-full">
-                Join Discord
+              <Users className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+              <h3 className="font-bold text-xl mb-2">Discord</h3>
+              <p className="text-gray-600 mb-4">Join our community discussions</p>
+              <ComicButton variant="purple" size="sm">
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Join
               </ComicButton>
             </div>
             
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
-              <div className="bg-sky-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-black">
-                <MessageCircle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-bold text-xl mb-3">Twitter</h3>
-              <p className="text-gray-600 mb-6">Follow us for the latest updates and announcements</p>
-              <ComicButton variant="pink" size="sm" className="w-full">
-                Follow Us
+              <ExternalLink className="w-12 h-12 text-pink-600 mx-auto mb-4" />
+              <h3 className="font-bold text-xl mb-2">Twitter</h3>
+              <p className="text-gray-600 mb-4">Follow for updates</p>
+              <ComicButton variant="pink" size="sm">
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Follow
               </ComicButton>
             </div>
             
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
-              <div className="bg-cyan-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-black">
-                <Send className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-bold text-xl mb-3">Telegram</h3>
-              <p className="text-gray-600 mb-6">Get instant updates and chat with the community</p>
-              <ComicButton variant="orange" size="sm" className="w-full">
-                Join Telegram
+              <FileText className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+              <h3 className="font-bold text-xl mb-2">Governance</h3>
+              <p className="text-gray-600 mb-4">Participate in protocol decisions</p>
+              <ComicButton variant="orange" size="sm">
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Vote
               </ComicButton>
             </div>
           </div>
