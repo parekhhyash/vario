@@ -143,7 +143,7 @@ function App() {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-32 pb-16">
         <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-black mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-black text-black mb-6 leading-tight">
             Earn upto <span className="text-purple-600">15%</span> APY on your{' '}
             <span className="text-lime-500">STABLES</span>
           </h1>
@@ -162,7 +162,7 @@ function App() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-20 px-4">
+      <section id="how-it-works" className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">How It Works</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -194,7 +194,7 @@ function App() {
       </section>
 
       {/* Why Vario */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4" style={{ backgroundColor: '#f2f2f2' }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Why Vario?</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -244,31 +244,28 @@ function App() {
           <p className="text-xl text-gray-700 mb-12">Join our community and participate in protocol governance.</p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
-              <FaDiscord className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+              <SiDiscord className="w-12 h-12 text-purple-600 mx-auto mb-4" />
               <h3 className="font-bold text-xl mb-2 text-black">Discord</h3>
               <p className="text-gray-600 mb-4">Join our community discussions</p>
-              <ComicButton variant="purple" size="sm" className="inline-flex items-center">
-                <ExternalLink className="w-4 h-4 mr-1" />
+              <ComicButton variant="purple" size="sm">
                 Join
               </ComicButton>
             </div>
             
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
-              <FaTwitter className="w-12 h-12 text-pink-600 mx-auto mb-4" />
+              <SiX className="w-12 h-12 text-pink-600 mx-auto mb-4" />
               <h3 className="font-bold text-xl mb-2 text-black">Twitter</h3>
               <p className="text-gray-600 mb-4">Follow for updates</p>
-              <ComicButton variant="pink" size="sm" className="inline-flex items-center">
-                <ExternalLink className="w-4 h-4 mr-1" />
+              <ComicButton variant="pink" size="sm">
                 Follow
               </ComicButton>
             </div>
             
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
-              <FaTelegram className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+              <SiTelegram className="w-12 h-12 text-sky-500 mx-auto mb-4" />
               <h3 className="font-bold text-xl mb-2 text-black">Telegram</h3>
               <p className="text-gray-600 mb-4">Join our Telegram community</p>
-              <ComicButton variant="orange" size="sm" className="inline-flex items-center">
-                <ExternalLink className="w-4 h-4 mr-1" />
+              <ComicButton variant="orange" size="sm">
                 Join
               </ComicButton>
             </div>
