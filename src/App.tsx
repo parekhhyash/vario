@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, ExternalLink, Users, FileText, Zap, Shield, TrendingUp, Plus, Minus, Twitter, MessageCircle } from 'lucide-react';
 import { FaDiscord, FaTwitter, FaTelegram } from 'react-icons/fa';
+import { SiDiscord, SiX, SiTelegram } from 'react-icons/si';
 
 const ComicButton = ({ 
   children, 
