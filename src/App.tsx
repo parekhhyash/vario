@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ChevronDown, ExternalLink, Users, FileText, Zap, Shield, TrendingUp, Plus, Minus, Twitter, MessageCircle } from 'lucide-react';
-import { FaDiscord, FaTwitter, FaTelegram } from 'react-icons/fa';
 import { SiDiscord, SiX, SiTelegram } from 'react-icons/si';
 
 const ComicButton = ({ 
@@ -162,34 +161,29 @@ function App() {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section id="how-it-works" className="py-20 px-4 bg-white">
+      {/* Why Vario */}
+      <section className="py-20 px-4" style={{ backgroundColor: '#f2f2f2' }}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">How It Works</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Why Vario?</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-lime-100 rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300">
-              <div className="bg-lime-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-black">
-                <span className="font-bold text-2xl">1</span>
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Deposit</h3>
-              <p className="text-gray-700">Deposit your stablecoins into the Vario protocol to start earning yield immediately.</p>
-            </div>
-            
-            <div className="bg-purple-100 rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300">
-              <div className="bg-purple-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-black">
-                <span className="font-bold text-2xl text-white">2</span>
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Yield</h3>
-              <p className="text-gray-700">Your funds automatically earn ~15% APY through our optimized DeFi strategies.</p>
-            </div>
-            
-            <div className="bg-pink-100 rounded-2xl p-8 text-center transform hover:scale-105 transition-all duration-300">
-              <div className="bg-pink-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-black">
-                <span className="font-bold text-2xl text-white">3</span>
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Withdraw</h3>
-              <p className="text-gray-700">Withdraw your principal and earned yield anytime with no lockup periods.</p>
-            </div>
+            <FeatureCard 
+              icon={Shield}
+              title="Stability"
+              description="Your funds are protected by multi-layered security protocols and audited smart contracts."
+              color="lime"
+            />
+            <FeatureCard 
+              icon={TrendingUp}
+              title="High Yield"
+              description="Earn industry-leading ~15% APY on your stablecoin holdings with automated optimization."
+              color="purple"
+            />
+            <FeatureCard 
+              icon={Zap}
+              title="Transparency"
+              description="Full on-chain transparency with real-time tracking of all protocol activities and yields."
+              color="pink"
+            />
           </div>
         </div>
       </section>
@@ -221,6 +215,11 @@ function App() {
         </div>
       </section>
 
+      {/* How It Works */}
+      <section id="how-it-works" className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">How It Works</h2>
+          <div className="grid md:grid-cols-3 gap-8">
       {/* Supported Assets */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
