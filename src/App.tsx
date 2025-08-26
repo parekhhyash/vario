@@ -254,10 +254,10 @@ function App() {
             </div>
             
             <div className="bg-white rounded-2xl p-8 border-4 border-black transform hover:scale-105 transition-all duration-300">
-              <SiX className="w-12 h-12 text-pink-600 mx-auto mb-4" />
+              <SiX className="w-12 h-12 text-black-600 mx-auto mb-4" />
               <h3 className="font-bold text-xl mb-2 text-black">Twitter</h3>
               <p className="text-gray-600 mb-4">Follow for updates and more</p>
-              <ComicButton variant="pink" size="sm">
+              <ComicButton variant="black" size="sm">
                 Follow
               </ComicButton>
             </div>
