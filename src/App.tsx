@@ -266,7 +266,7 @@ function App() {
               <SiTelegram className="w-12 h-12 text-sky-500 mx-auto mb-4" />
               <h3 className="font-bold text-xl mb-2 text-black">Telegram</h3>
               <p className="text-gray-600 mb-4">Join our Telegram community</p>
-              <ComicButton variant="orange" size="sm">
+              <ComicButton variant="blue" size="sm">
                 Join
               </ComicButton>
             </div>
